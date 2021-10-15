@@ -11,11 +11,7 @@ function getEffects(effectList: string[]) {
 type OptionsType = {
     font?: string,
     background?: string,
-    effects?: string[],
-    bold?: boolean,
-    italic?: boolean,
-    mono?: boolean,
-    link?: string
+    effects?: string[]
 };
 export function color(text: string, options: OptionsType) {
     const preparedText = text.replace(/ё/g, 'е');
