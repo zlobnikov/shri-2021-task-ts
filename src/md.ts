@@ -1,5 +1,11 @@
 import { color } from './colors';
-export function markdown(text, options) {
+type OptionsType = {
+    bold?: boolean,
+    italic?: boolean,
+    mono?: boolean,
+    link?: string
+}
+export function markdown(text: string, options: OptionsType) {
     let result = text;
     if (options) {
         if (options.bold) {
