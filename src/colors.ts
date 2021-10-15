@@ -1,6 +1,5 @@
-import { backgroundColors, effects, fontColors, Reset, WhiteBlack } from './model';
-type ColorsType = keyof typeof backgroundColors;
-function addColor(text: string, color: ColorsType, isBackground = false) {
+import { backgroundColors, effects, fontColors, Reset, ColorType, WhiteBlack } from './model';
+function addColor(text: string, color: ColorType, isBackground = false) {
     if (isBackground) {
         return text + backgroundColors[color];
     }
@@ -11,7 +10,7 @@ function getEffects(effectList: EffectsType[]) {
     return effectList.map(effect => effects[effect]).join('');
 }
 export type ColorOptionsType = {
-    font?: ColorsType,
+    font?: ColorType,
     background?: WhiteBlack,
     effects?: string[]
 };
