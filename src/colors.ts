@@ -12,7 +12,7 @@ function getEffects(effectList: EffectsType[]) {
 export type ColorOptionsType = {
     font?: ColorType,
     background?: WhiteBlack,
-    effects?: string[]
+    effects?: EffectsType[]
 };
 export function color(text: string, options: ColorOptionsType) {
     const preparedText = text.replace(/ё/g, 'е');
