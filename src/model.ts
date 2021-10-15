@@ -26,7 +26,8 @@ export const backgroundColors: Record<string, string> = {
     cyan: '\x1b[46m',
     white: '\x1b[47m',
 };
-export const contrast: Record<string, string> = {
+export type WhiteBlack = 'white' | 'black';
+export const contrast: Record<string, WhiteBlack> = {
     black: 'white',
     red: 'black',
     green: 'black',

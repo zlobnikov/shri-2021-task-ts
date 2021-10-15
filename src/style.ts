@@ -1,14 +1,8 @@
 import { color } from './colors';
+import { ColorOptionsType } from './colors';
 import { markdown } from './md';
-type OptionsType = {
-    font?: string,
-    background?: string,
-    effects?: string[],
-    bold?: boolean,
-    italic?: boolean,
-    mono?: boolean,
-    link?: string
-};
+import { MarkdownOptionsType } from './md';
+type OptionsType = ColorOptionsType & MarkdownOptionsType;
 export function style(text: string, options: OptionsType) {
     if (text.length === 0) {
         return text;
