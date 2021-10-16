@@ -1,4 +1,4 @@
-import { backgroundColors, effects, fontColors, Reset, ColorType, WhiteBlack } from './model';
+import { backgroundColors, effects, fontColors, Reset, ColorType } from './model';
 function addColor(text: string, color: ColorType, isBackground = false): string {
     if (isBackground) {
         return text + backgroundColors[color];
@@ -10,9 +10,9 @@ function getEffects(effectList: EffectsType[]): string {
     return effectList.map(effect => effects[effect]).join('');
 }
 export type ColorOptionsType = {
-    font?: ColorType,
-    background?: WhiteBlack,
-    effects?: EffectsType[]
+    font?: ColorType;
+    background?: ColorType;
+    effects?: EffectsType[];
 };
 export function color(text: string, options: ColorOptionsType): string {
     const preparedText = text.replace(/ё/g, 'е');

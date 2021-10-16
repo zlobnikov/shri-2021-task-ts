@@ -1,9 +1,9 @@
 import { color } from './colors';
 export type MarkdownOptionsType = {
-    bold?: true,
-    italic?: true,
-    mono?: true,
-    link?: string
+    bold?: true;
+    italic?: true;
+    mono?: true;
+    link?: string;
 }
 export function markdown(text: string, options: MarkdownOptionsType): string {
     let result = text;

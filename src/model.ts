@@ -2,7 +2,7 @@ export const Reset = '\x1b[0m';
 export type ColorType =
     'black' | 'red' | 'green' | 'yellow' |
     'blue' | 'magenta' | 'cyan' | 'white';
-export const effects: Record<string, string> = {
+export const effects = {
     bright: '\x1b[1m',
     dim: '\x1b[2m',
     italic: '\x1b[3m',
