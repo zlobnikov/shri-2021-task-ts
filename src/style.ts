@@ -3,7 +3,7 @@ import { ColorOptionsType } from './colors';
 import { markdown } from './md';
 import { MarkdownOptionsType } from './md';
 type OptionsType = ColorOptionsType & MarkdownOptionsType;
-export function style(text: string, options: OptionsType) {
+export function style(text: string, options: OptionsType): string {
     if (text.length === 0) {
         return text;
     }
